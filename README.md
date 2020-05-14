@@ -1,7 +1,7 @@
 # Median
-Median filtering is an efficient mean to remove impulse noise from signal. As a filter is a non linear process and algorithm complexity is the same as sorting Used as a flter for iamges it is not separable and coputation can become prohibitive with large kernel. 
+Median filtering is an efficient mean to remove impulse also known as Salt & Pepper noise from signal. Median filtering is a non linear process and algorithm complexity is the same as sorting. It is not separable and computation need rapidly increase with kernel size. 
 
-Within this scope this is a very fast and simple algorithm to find median value in a vector of integers in RANGE. The is no need for sort or comparison, it is based on building an histogram of values and then integrate histogram up to n/2.
-This approach was proved to be much faster than and other meth based on sort: quicksort, radixsort, quickselect, binsort,median-of-median, etc.
+Here is a collection of median functions implementing minim comparision algorithm for vector of matrix integers in RANGE.
+Based on a specialization of sorting network,quick select,and three-way partitionning, histogram sort, median-of-median.
 
-This algorithm is simple and fast but sequential and not so easy to parallelelize. due to contention when building the histogram. A CUDA version is currently under developpement.
+Especilly developed for image filtering. 
